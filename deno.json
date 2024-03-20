@@ -1,4 +1,9 @@
 {
+  "name": "@principledcodes/trex",
+  "version": "1.0.0",
+  "exports": {
+    ".": "./src/mod.ts"
+  },
   "fmt": {
     "exclude": [
       ".cache",
@@ -19,16 +24,17 @@
   },
   "imports": {
     "deps": "./deps.ts",
-    "version": "./version.ts"
+    "version": "./version.ts",
+    "src/": "./src/"
   },
   "tasks": {
     "cache": "deno cache --lock-write deps.ts",
     "cache-reload": "deno cache --reload deps.ts",
-    "build:linux": "deno compile --allow-env=REGISTRY_URL,INFO_RESOURCE --allow-read --allow-write --allow-net --target x86_64-unknown-linux-gnu --output dist/trex-linux main.ts",
-    "build:win": "deno compile --allow-env=REGISTRY_URL,INFO_RESOURCE --allow-read --allow-write --allow-net --target x86_64-pc-windows-msvc --output dist/trex-win.exe main.ts",
-    "build:darwin-x64": "deno compile --allow-env=REGISTRY_URL,INFO_RESOURCE --allow-read --allow-write --allow-net --target x86_64-apple-darwin --output dist/trex-darwin-x64 main.ts",
-    "build:darwin-arm64": "deno compile --allow-env=REGISTRY_URL,INFO_RESOURCE --allow-read --allow-write --allow-net --target aarch64-apple-darwin --output dist/trex-darwin-arm64 main.ts",
-    "start": "deno run --allow-env=REGISTRY_URL,INFO_RESOURCE --allow-read --allow-write --allow-net main.ts",
+    "build:linux": "deno compile --allow-env=REGISTRY_URL,INFO_RESOURCE --allow-read --allow-write --allow-net --target x86_64-unknown-linux-gnu --output dist/trex-linux cmd/trex/main.ts",
+    "build:win": "deno compile --allow-env=REGISTRY_URL,INFO_RESOURCE --allow-read --allow-write --allow-net --target x86_64-pc-windows-msvc --output dist/trex-win.exe cmd/trex/main.ts",
+    "build:darwin-x64": "deno compile --allow-env=REGISTRY_URL,INFO_RESOURCE --allow-read --allow-write --allow-net --target x86_64-apple-darwin --output dist/trex-darwin-x64 cmd/trex/main.ts",
+    "build:darwin-arm64": "deno compile --allow-env=REGISTRY_URL,INFO_RESOURCE --allow-read --allow-write --allow-net --target aarch64-apple-darwin --output dist/trex-darwin-arm64 cmd/trex/main.ts",
+    "start": "deno run --allow-env=REGISTRY_URL,INFO_RESOURCE --allow-read --allow-write --allow-net cmd/trex/main.ts",
     "test": "deno test -A"
   }
 }

@@ -1,4 +1,4 @@
-import { type Diff } from "../diff/mod.ts";
+import { type Diff } from "src/diff/mod.ts";
 import { streams } from "deps";
 import DepsVersionTransformStream from "./DepsVersionTransformStream.ts";
 

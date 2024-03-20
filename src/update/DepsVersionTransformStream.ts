@@ -1,4 +1,4 @@
-import { Diff } from "../diff/mod.ts";
+import { Diff } from "src/diff/mod.ts";
 
 export default class DepsVersionTransformStream
   extends TransformStream<string, string> {

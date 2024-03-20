@@ -1,7 +1,6 @@
-// TODO: update usage info, change binaries name.
 const run = () => {
   console.log(`
-  Usage: deno run --allow-net --allow-read https://deno.land/x/depsbot/src/cli/mod.ts [options]
+  Usage: trex [options]
 
   Options:
     -h, --help     Show help

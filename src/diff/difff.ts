@@ -2,7 +2,7 @@ import {
   Dependency,
   DependencyName,
   DependencyReferenceInfo,
-} from "../deps/mod.ts";
+} from "src/deps/mod.ts";
 import { type Diff, type DiffsByLocation } from "./Diff.ts";
 
 export * from "./Diff.ts";

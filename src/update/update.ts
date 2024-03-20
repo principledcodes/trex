@@ -1,4 +1,4 @@
-import type { DiffsByLocation } from "../diff/mod.ts";
+import type { DiffsByLocation } from "src/diff/mod.ts";
 import { updateFile } from "./updateFile.ts";
 
 export async function update(depsDiff: DiffsByLocation) {
