@@ -80,7 +80,7 @@ jobs:
           for file in *; do sha256sum $file >> checksums.txt; done
 
       - name: Archive binaries
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: trex
           path: dist/
